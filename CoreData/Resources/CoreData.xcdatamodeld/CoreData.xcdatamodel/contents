@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Course" representedClassName="Course" parentEntity="Object" syncable="YES" codeGenerationType="class">
+        <attribute name="lesson" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teacher" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Student" inverseName="courses" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Object" representedClassName="Object" isAbstract="YES" syncable="YES" codeGenerationType="class"/>
+    <entity name="Student" representedClassName="Student" parentEntity="Object" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="surname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="students" inverseEntity="Course" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Course" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Object" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Student" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
